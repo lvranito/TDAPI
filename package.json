@@ -8,7 +8,7 @@
   },
   "main": "WebServer.js",
   "scripts": {
-    "start": "node WebServer.js",
+    "start": "node WebServerxx.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luís Ranito",
