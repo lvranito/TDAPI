@@ -2,6 +2,9 @@
   "name": "chalenge",
   "version": "1.0.0",
   "description": "Chalenge API",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "WebServer.js",
   "scripts": {
     "start": "node WebServer.js",
