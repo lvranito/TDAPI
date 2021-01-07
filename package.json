@@ -4,7 +4,7 @@
   "description": "Chalenge API",
   "main": "WebServer.js",
   "scripts": {
-    "start": "WebServer.js",
+    "start": "node WebServer.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luís Ranito",
