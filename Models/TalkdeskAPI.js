@@ -114,7 +114,7 @@ exports.getSectors = async function(reqData) {
     returnData = checkValidationReturn(valData);
 
     if( !returnData.isValid ) {
-      console.log(retData.message);
+      console.log(returnData.message);
       return returnData;
     }
     numbers = valData.phoneNumbers.filter(p => p.prefix != undefined);
