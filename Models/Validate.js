@@ -11,6 +11,7 @@ function loadPrefixFile() {
 }
 //#endregion
 
+// verify for empty requests
 function isEmptyObject(obj) {
     let ret = new Object();
     ret.isValid = true;
