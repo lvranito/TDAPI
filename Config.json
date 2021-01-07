@@ -1,0 +1,19 @@
+{
+    "configuration": 
+    {
+        "host": "localhost",
+        "port": 8080,
+        "prefixFile": "prefixes.txt",
+        "reqHost": "challenge-business-sector-api.meza.talkdeskstg.com",
+        "hostSectorPath": "sector"
+    },
+
+    "errors":
+    [
+        { "state": "success", "return": { "code": 200, "message": "success" }  },
+        { "state": "invalidnumber", "return": { "code": 400, "message": "invalid phone number" }  },
+        { "state": "nophonenumbers", "return": { "code": 400, "message": "no phone numbers" }  },        
+        { "state": "emptyAPIreturn", "return": { "code": 400, "message": "API empty return" }  },
+        { "state": "error", "return": { "code": 500, "message": "application error" }  }
+    ]
+}
