@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  var todoList = require('../controllers/ApiController');
+  var todoList = require('../Controllers/ApiController');
 
   // API List Routes
   app.route('/aggregate')
