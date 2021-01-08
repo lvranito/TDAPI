@@ -22,7 +22,7 @@ var routes = require('./Routes/ApiRoutes'); //importing route
 routes(app);
 
 // start web server
-var server = app.listen(port, host, function () {
+var server = app.listen(process.env.PORT || port, host, function () {
   var host = server.address().address;
   console.log('Listening at http://%s:%s', host, port)
 })
