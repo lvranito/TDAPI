@@ -1,2 +1,2 @@
 web: npm run start
-worker: worker TalkdeskAPI.js
+worker: node TalkdeskAPI.js
