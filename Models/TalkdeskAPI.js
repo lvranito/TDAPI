@@ -5,6 +5,7 @@ const validation = require('../Models/Validate');
 const returndata = require('./returnData');
 const reqHost = config.configuration.reqHost;
 const sectorPath = config.configuration.hostSectorPath;
+var timeStamp = Date.now();
 
 //#region Prefixes
 // clears the Prefix array
@@ -107,7 +108,6 @@ exports.getSectors = async function(res, reqData) {
     var PfxSect = new  Object();
     let numbers;
     let phoneData = reqData;
-    let timeStamp = Date.now();
 
     //#region pre-validation
     console.log('before validation:' + new Date());
