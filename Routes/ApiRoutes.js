@@ -9,7 +9,4 @@ module.exports = function(app) {
   app.route('/Teste/:msgTeste')
     .get(todoList.teste);
 
-  app.get('/Benny/:msg', function(req,res) {
-    res.json('Beeny says ' + req.params.msg) }
-  )
 };

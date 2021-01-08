@@ -107,6 +107,7 @@ exports.getSectors = async function(res, reqData) {
     var PfxSect = new  Object();
     let numbers;
     let phoneData = reqData;
+    let timeStamp = Date.now();
 
     //#region pre-validation
     console.log('before validation:' + new Date());
@@ -125,7 +126,15 @@ exports.getSectors = async function(res, reqData) {
         if (checkAPIReturn(sector)){
             AddPrefix(number.prefix, sector.sector,PfxSect);
         }
-        res.writeProcessing();
+        
+        // to prevent Heroku process 30 seconds timeout
+        if (Math.abs((timeStamp - Date.now())/1000) > 20)
+        {
+            // sends HTTP 102 Processing Status code            
+            console.log('sending HTTP 102 processing status');
+            res.writeProcessing();
+            timeStamp = Date.now();
+        }
     }        
     returnData.data = PfxSect;
     return returnData;
