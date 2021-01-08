@@ -11,8 +11,7 @@ exports.teste = function(req, res) {
 exports.aggregate = async (req, res) => {
   try {
     let phoneData = req.body;
-    var sectors = await talkDeskAPi.getSectors(phoneData);
-  
+    var sectors = await talkDeskAPi.getSectors(res, phoneData);
     if (sectors.isValid)
     {
       res.status(sectors.code);

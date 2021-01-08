@@ -96,7 +96,7 @@ function checkValidationReturn(valReturn) {
 }
 
 
-exports.getSectors = async function(reqData) {
+exports.getSectors = async function(res, reqData) {
     /***** returnData object structure ********
         isValid: bool  -- validation state 
         message: string -- return message error / success
@@ -125,6 +125,7 @@ exports.getSectors = async function(reqData) {
         if (checkAPIReturn(sector)){
             AddPrefix(number.prefix, sector.sector,PfxSect);
         }
+        res.writeProcessing();
     }        
     returnData.data = PfxSect;
     return returnData;
