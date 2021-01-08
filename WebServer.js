@@ -24,9 +24,9 @@ routes(app);
 // start web server
 //var server = app.listen(process.env.PORT || port, host, function () {
 var server = app.listen(process.env.PORT || port, function () {
-  var host = server.address().address;
-  console.log('Listening at http://%s:%s', host, port)
+  //var host = server.address().address;
+  console.log('Listening at http://%s:%s', process.env.HOST_NAME, process.env.PORT || port)
 })
 
-console.log('RESTful API server started on: ' + port);
+console.log('RESTful API server started on: ' + process.env.PORT);
 
