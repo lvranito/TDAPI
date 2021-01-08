@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 //#region configuration
-var config = require('./app/config.json');
+var config = require('./config.json');
 const host = config.configuration.host;
 const port = config.configuration.port;
 //#endregion
