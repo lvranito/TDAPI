@@ -5,14 +5,14 @@
  Searches for a prefix
  Validate phone in prefixes data
 *******************************************/
-var config = require('../config.json');
+var config = require('../Config.json');
 const fileName = config.configuration.prefixFile;
 
 // loads the prefixes files into object array
 exports.LoadPrefixes = function() {
     var fs = require('fs');
     var path = require('path');
-    var fileLoc = path.resolve('./resources');
+    var fileLoc = path.resolve('./Resources');
     fileLoc = path.join(fileLoc, fileName);
 
     try {

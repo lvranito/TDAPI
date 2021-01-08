@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 //#endregion
 
 //#region logging
-var logger = require('./Controllers/logging');
+var logger = require('./Controllers/Logging');
 app.use(logger());
 //#endregion  
 
