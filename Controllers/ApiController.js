@@ -15,7 +15,7 @@ exports.aggregate = async (req, res) => {
     if (sectors.isValid)
     {
       res.status(sectors.code);
-      res.json(JSON.stringify(sectors.data));
+      res.send(JSON.stringify(sectors.data));
     }
     else
       throw new returnData.returnDataMessage(false,'error',sectors.message);
